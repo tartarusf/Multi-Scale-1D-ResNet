@@ -2,6 +2,8 @@ import torch.nn as nn
 import math
 import torch.utils.model_zoo as model_zoo
 
+#abc
+
 import torch
 
 def conv3x3(in_planes, out_planes, stride=1):
@@ -161,7 +163,7 @@ class MSResNet(nn.Module):
         # self.drop = nn.Dropout(p=0.2)
         self.fc = nn.Linear(256*3, num_classes)
 
-        # todo: modify the initialization
+        # todo: modify  initialization
         # for m in self.modules():
         #     if isinstance(m, nn.Conv1d):
         #         n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
