@@ -4,7 +4,7 @@ import torch.utils.model_zoo as model_zoo
 
 import torch
 
-def conv3x3(in_planes, out_planes, stride=1):
+def conv3x3(in_planes, out_planes, stride=1):        #in_planes：输入通道数（input channels）；out_planes：输出通道数（output channels）；stride：卷积的步长（stride），默认为1。
     """3x3 convolution with padding"""
     return nn.Conv1d(in_planes, out_planes, kernel_size=3, stride=stride,
                      padding=1, bias=False)
@@ -22,7 +22,7 @@ def conv7x7(in_planes, out_planes, stride=1):
 class BasicBlock3x3(nn.Module):
     expansion = 1
 
-    def __init__(self, inplanes3, planes, stride=1, downsample=None):
+    def __init__(self, inplanes3, planes, stride=1, downsample=None):   #构建一个具有两个3x3卷积层的基本块。
         super(BasicBlock3x3, self).__init__()
         self.conv1 = conv3x3(inplanes3, planes, stride)
         self.bn1 = nn.BatchNorm1d(planes)

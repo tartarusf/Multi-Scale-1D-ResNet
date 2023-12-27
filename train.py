@@ -38,7 +38,7 @@ num_epochs = 350
 
 
 # load data
-data = sio.loadmat('data/changingSpeed_train.mat')
+data = sio.loadmat('data/changingSpeed_train.mat')     #训练集文件路径
 train_data = data['train_data_split']
 train_label = data['train_label_split']
 
@@ -54,7 +54,7 @@ train_data_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shu
 
 
 
-data = sio.loadmat('data/changingSpeed_test.mat')
+data = sio.loadmat('data/changingSpeed_test.mat')     #测试集文件路径
 test_data = data['test_data_split']
 test_label = data['test_label_split']
 
